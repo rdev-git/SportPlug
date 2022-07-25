@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/liveMatchesFragment">
+
+    <fragment
+        android:id="@+id/liveMatchesFragment"
+        android:name="com.rdevl.sportplug2.ui.live.LiveMatchesFragment"
+        android:label="fragment_live_matches"
+        tools:layout="@layout/fragment_live_matches" >
+        <action
+            android:id="@+id/action_liveMatchesFragment_to_liveDetailMatchFragment"
+            app:destination="@id/liveDetailMatchFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/champsFragment"
+        android:name="com.rdevl.sportplug2.ui.all.champs.ChampsFragment"
+        android:label="fragment_champs"
+        tools:layout="@layout/fragment_champs" >
+        <action
+            android:id="@+id/action_champsFragment_to_matchesFragment"
+            app:destination="@id/matchesFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/matchesFragment"
+        android:name="com.rdevl.sportplug2.ui.all.matches.MatchesFragment"
+        android:label="fragment_matches"
+        tools:layout="@layout/fragment_matches" >
+        <action
+            android:id="@+id/action_matchesFragment_to_matchFragment"
+            app:destination="@id/matchFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/matchFragment"
+        android:name="com.rdevl.sportplug2.ui.all.match.MatchFragment"
+        android:label="fragment_match"
+        tools:layout="@layout/fragment_match" />
+    <fragment
+        android:id="@+id/liveDetailMatchFragment"
+        android:name="com.rdevl.sportplug2.ui.live.live_detail.LiveDetailMatchFragment"
+        android:label="LiveDetailMatchFragment" />
+</navigation>
